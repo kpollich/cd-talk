@@ -1,0 +1,68 @@
+# Deployment at Shift Lab
+---
+ ## A roughly organized series of thoughts around deployment practices across all projects
+---
+## Problems and Considerations
+* We need to know what is deployed/not deployed at any given time
+* We need client buy-in for when deployments go live
+* We need to ensure transparency with clients throughout the deployment process
+---
+## Open Question: What are some other deployment pain points?
+---
+## Current Solutions
+* PDF documents detailing each deployed version w/ manually drafted changelogs
+* Contact client on Basecamp, Slack, Pivotal, to schedule + prepare deployments
+* Require developer availability + advance scheduling for deployments
+* Some projects use semantic versioning, others don't
+---
+## Open Question: What are some other deployment proceses we have on projects?
+---
+## Continuous Delivery
+---
+### What is Continuous Delivery?
+* As much automated testing as possible
+* Code is _always_ deployable
+* Reduce the need for heavy integration tests, code freezes, etc
+* Verify new features in a production-like environment (`staging`)
+* Manually deploy `production` when feature sets are approved
+* Ensure **low risk** releases
+* Deploy very frequently
+---
+### Continuous Deployment
+* Everything is the same as continuous delivery (automation, tests, etc), but every change is automatically deployed to the production environment
+* This is usually not viable for us as we work in an agency setting, but we do have some projects where this happens (Netlify projects, static sites, etc)
+---
+## Why Continuous Delivery?
+* Reduced deployment risk
+* Test suites and automated builds/deployments of source code reduce the risk of regressions
+* "Believable" Progress
+* Acceptance for work is much easier and more convincing when it's been deployed to multiple production-like environments
+* Easier and more frequent access to user feedback
+* Automation around deployments to staging/QA environments means clients always have a place to go where they can see in progress or nearly complete work
+---
+## How can Shift move towards Continuous Delivery?
+---
+## Aside
+* We're pretty close in some areas already
+* Doesn't need to be overnight, wholesale adoption
+* At the end of the day, do what works for us
+* Incorporate some best practices and tweak what we need to
+---
+## Moving towards Continuous Delivery
+* Automation, automation, automation
+* Continuous Integration and a basic test suite should be the minimum for every project
+* Standardize our changelog generation process and then automate it
+* Use semanatic versioning and Git tags for all projects
+---
+## Questions?
+---
+## Additional Reading
+[Continuous Delivery vs. Continuous Deployment](https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff)
+
+[What is Continuous Delivery? - Continuous Delivery](https://continuousdelivery.com/)
+
+[Continuous Delivery - Martin Fowler](https://martinfowler.com/bliki/ContinuousDelivery.html)
+
+[What is Continuous Delivery? - Continuous Delivery](https://continuousdelivery.com/#why-continuous-delivery)
+---
+# The end
